@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+  //>>>样式穿透
   .wrapper >>> .swiper-pagination-bullet-active
     background:#fff
   .wrapper
@@ -41,7 +41,6 @@ export default {
     overflow:hidden
     padding-bottom:37%
     background:#eee
-
     .swiper-img
       width:100%
 </style>
