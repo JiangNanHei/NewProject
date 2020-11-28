@@ -82,6 +82,8 @@ export default {
   .icons
     /*background: green*/
     font-size: .2rem
+    margin-top: .1rem
+    margin-bottom: .1rem
     .icon
       float: left
       width: 25%
