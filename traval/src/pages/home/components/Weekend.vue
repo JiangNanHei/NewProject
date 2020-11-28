@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪</div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key="item.id">
+      <li class="item" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
         </div>
@@ -20,26 +20,7 @@
 
   export default {
     name: "HomeWeekend",
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl:'http://img1.qunarzz.com/sight/source/1505/8a/d412db9fcd44dd.jpg_r_640x214_86f303a2.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '洞外骄阳似火，洞内清凉温润洞外骄阳似火，洞内清凉温润洞外骄阳似火'
-        },{
-          id: '0002',
-          imgUrl:'http://img1.qunarzz.com/sight/source/1811/ed/bf2bc72af591d5.jpg_r_640x214_f9f1bfcc.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '洞外骄阳似火，洞内清凉温润洞外骄阳似火'
-        },{
-          id: '0003',
-          imgUrl:'http://img1.qunarzz.com/sight/source/1505/8a/d412db9fcd44dd.jpg_r_640x214_86f303a2.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '洞外骄阳似火，洞内清凉温润洞外骄阳似火'
-        }]
-      }
-    }
+    props:['list'],
   }
 </script>
 

@@ -1,0 +1,82 @@
+{
+  "ret": true,
+  "data": {
+    "city": "北京",
+    "swiperList": [{
+      "id": "0001",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/202011/bdf238d87ac3aec799a78afa83662172.jpg_890x330_0a85c55b.jpg"
+    }, {
+      "id": "0002",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/202011/bdf238d87ac3aec799a78afa83662172.jpg_890x330_0a85c55b.jpg"
+    }],
+    "iconsList": [{
+      "id": "0001",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/158387fe5376294f3776d01358d6b73b.png",
+      "desc": "景点门票景点门票景点门票景点门票景点门票景点门票"
+    },{
+      "id": "0002",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/69e8b07cb2d438c5530aebd4c8e3abd3.png",
+      "desc": "一日游"
+    },{
+      "id": "0003",
+      "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+      "desc": "拙政园"
+    },{
+      "id": "0004",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/b7a5e6b1774eda4fc9e32588f1d00c94.png",
+      "desc": "踏青赏花"
+    },{
+      "id": "0005",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/158387fe5376294f3776d01358d6b73b.png",
+      "desc": "景点门票"
+    },{
+      "id": "0006",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/69e8b07cb2d438c5530aebd4c8e3abd3.png",
+      "desc": "一日游"
+    },{
+      "id": "0007",
+      "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+      "desc": "拙政园"
+    },{
+      "id": "0008",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/b7a5e6b1774eda4fc9e32588f1d00c94.png",
+      "desc": "踏青赏花"
+    },{
+      "id": "0009",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/b7a5e6b1774eda4fc9e32588f1d00c94.png",
+      "desc": "踏青赏花"
+    }],
+    "recommendList": [{
+      "id": "0001",
+      "imgUrl":"http://img1.qunarzz.com/sight/p0/2006/b7/b728c5ce8b87efe4a3.water.jpg_200x200_e4843bf5.jpg",
+      "title": "大连圣亚海洋世界",
+      "desc": "洞外骄阳似火，洞内清凉温润洞外骄阳似火，洞内清凉温润洞外骄阳似火"
+    },{
+      "id": "0002",
+      "imgUrl":"http://img1.qunarzz.com/sight/p0/2006/b7/b728c5ce8b87efe4a3.water.jpg_200x200_e4843bf5.jpg",
+      "title": "大连圣亚海洋世界",
+      "desc": "洞外骄阳似火，洞内清凉温润洞外骄阳似火"
+    },{
+      "id": "0003",
+      "imgUrl":"http://img1.qunarzz.com/sight/p0/2006/b7/b728c5ce8b87efe4a3.water.jpg_200x200_e4843bf5.jpg",
+      "title": "大连圣亚海洋世界",
+      "desc": "洞外骄阳似火，洞内清凉温润洞外骄阳似火"
+    }],
+    "WeekendList": [{
+      "id": "0001",
+      "imgUrl":"http://img1.qunarzz.com/sight/source/1505/8a/d412db9fcd44dd.jpg_r_640x214_86f303a2.jpg",
+      "title": "大连圣亚海洋世界",
+      "desc": "洞外骄阳似火，洞内清凉温润洞外骄阳似火，洞内清凉温润洞外骄阳似火"
+    },{
+      "id": "0002",
+      "imgUrl":"http://img1.qunarzz.com/sight/source/1811/ed/bf2bc72af591d5.jpg_r_640x214_f9f1bfcc.jpg",
+      "title": "大连圣亚海洋世界",
+      "desc": "洞外骄阳似火，洞内清凉温润洞外骄阳似火"
+    },{
+      "id": "0003",
+      "imgUrl":"http://img1.qunarzz.com/sight/source/1505/8a/d412db9fcd44dd.jpg_r_640x214_86f303a2.jpg",
+      "title": "大连圣亚海洋世界",
+      "desc": "洞外骄阳似火，洞内清凉温润洞外骄阳似火"
+    }]
+  }
+}
