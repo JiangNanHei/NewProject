@@ -1,0 +1,8 @@
+1.下载reset.css 初始化重叠样式表
+2.下载border.css 解决一像素边框问题
+在main.js下引入
+3.引入fastclick库 解决一些浏览器点击事件延迟300毫秒问题
+npm install fastclick --save
+4.下载 stylus stylus-loader css语言
+5.使用iconfont图标
+6.使用swiper
