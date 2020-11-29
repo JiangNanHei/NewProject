@@ -5,4 +5,5 @@
 npm install fastclick --save
 4.下载 stylus stylus-loader css语言
 5.使用iconfont图标
-6.使用swiper
+6.使用swiper --轮播图
+7.使用better-scroll --滑动页面
