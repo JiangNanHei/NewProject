@@ -34,7 +34,7 @@ export default {
     }
   },
   methods: {
-    getHomeInfo (){
+    getHomeInfo () {
       axios.get('/api/index.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
@@ -46,7 +46,6 @@ export default {
         this.recommendList = res.data.recommendList
         this.WeekendList = res.data.WeekendList
       }
-
     }
   },
   mounted () {

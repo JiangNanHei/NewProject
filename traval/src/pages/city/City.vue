@@ -6,15 +6,15 @@
 </template>
 
 <script>
-    import CityHeader from './compoents/header'
-    import CitySearch from './compoents/Search'
-    export default {
-        name: "City",
-        components: {
-          CityHeader,
-          CitySearch
-        }
-    }
+import CityHeader from './compoents/header'
+import CitySearch from './compoents/Search'
+export default {
+  name: 'City',
+  components: {
+    CityHeader,
+    CitySearch
+  }
+}
 </script>
 
 <style scoped>

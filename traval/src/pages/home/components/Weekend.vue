@@ -17,11 +17,10 @@
 </template>
 
 <script>
-
-  export default {
-    name: "HomeWeekend",
-    props:['list'],
-  }
+export default {
+  name: 'HomeWeekend',
+  props: ['list']
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -53,4 +52,3 @@
       color:#ccc
       ellipse()
 </style>
-
