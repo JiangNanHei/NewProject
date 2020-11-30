@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     hasNoData () {
-      return !this.list.lengths
+      return !this.list.length
     }
   },
   watch: {
