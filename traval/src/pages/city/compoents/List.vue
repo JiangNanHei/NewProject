@@ -5,14 +5,19 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">{{this.$store.state.city}}</div>
           </div>
         </div>
       </div>
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper" v-for="item of hotCities" :key="item.id">
+          <div
+            class="button-wrapper"
+            v-for="item of hotCities"
+            :key="item.id"
+            @click="handleCityClicks(item.name)"
+          >
             <div class="button">{{item.name}}</div>
           </div>
         </div>
@@ -23,7 +28,12 @@
            :ref="content"
       >
         <div class="title border-topbottom">{{content}}</div>
-        <div class="item-list" v-for="items of item" :key="items.id">
+        <div
+          class="item-list"
+          v-for="items of item"
+          :key="items.id"
+          @click="handleCityClicks(items.name)"
+        >
           <div class="item border-bottom">{{items.name}}</div>
         </div>
       </div>
@@ -42,13 +52,20 @@ export default {
       letter: ''
     }
   },
+  methods: {
+    handleCityClicks (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
+    }
+  },
   mounted () {
     const _this = this
-    setTimeout(function () {
-      _this.scroll = new Bscroll(_this.$refs.wrapper)
-    }, 500)
+    this.scroll = new Bscroll(this.$refs.wrapper)
     Bus.$on('change', function (e) {
       _this.letter = e
+    })
+    Bus.$on('searchCity', function (e) {
+      _this.handleCityClicks(e)
     })
   },
   watch: {

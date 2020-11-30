@@ -9,6 +9,7 @@
           class="search-item border-bottom"
           v-for="item of list"
           :key="item.id"
+          @click="provideShow(item.name)"
         >
           {{item.name}}
         </li>
@@ -20,6 +21,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import Bus from 'styles/Bus.js'
 export default {
   name: 'CitySearch',
   props: ['cities'],
@@ -28,6 +30,11 @@ export default {
       keyword: '',
       list: [],
       timer: null
+    }
+  },
+  methods: {
+    provideShow (city) {
+      Bus.$emit('searchCity', city)
     }
   },
   computed: {
