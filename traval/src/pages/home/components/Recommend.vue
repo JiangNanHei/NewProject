@@ -61,4 +61,5 @@ export default {
         padding: 0 .2rem
         border-radius: .06rem
         color:#fff
+        border: none
 </style>
