@@ -60,7 +60,9 @@ export default {
   },
   mounted () {
     const _this = this
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    setTimeout(function () {
+      _this.scroll = new Bscroll(_this.$refs.wrapper,{click:true})
+    },500)
     Bus.$on('change', function (e) {
       _this.letter = e
     })
