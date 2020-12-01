@@ -1,20 +1,42 @@
 <template>
-    <div class="banner">
-      <img class="baneer-img" src="">
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <img class="baneer-img" :src="list">
       <div class="banner-info">
         <div class="banner-tittle">
-          zheshisge
+          {{sightName}}
         </div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe635;</span>
         </div>
       </div>
     </div>
+    <gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></gallary>
+  </div>
 </template>
 
 <script>
+import Gallary from 'common/gallary/Gallary'
 export default {
-  name: "DetailBanner"
+  name: "DetailBanner",
+  components: {
+    Gallary
+  },
+  props: ['list','gallaryImgs','sightName'],
+  data () {
+    return {
+      showGallary: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+
+  }
 }
 </script>
 
