@@ -44,7 +44,7 @@
 <script>
 import Bscroll from 'better-scroll'
 import Bus from 'styles/Bus.js'
-import { mapState , mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'CityList',
   props: ['hotCities', 'cities'],
@@ -69,8 +69,8 @@ export default {
   mounted () {
     const _this = this
     setTimeout(function () {
-      _this.scroll = new Bscroll(_this.$refs.wrapper,{click:true})
-    },500)
+      _this.scroll = new Bscroll(_this.$refs.wrapper, {click: true})
+    }, 500)
     Bus.$on('change', function (e) {
       _this.letter = e
     })

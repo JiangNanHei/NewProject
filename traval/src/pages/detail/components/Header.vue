@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "DetailHeader",
+  name: 'DetailHeader',
   data () {
     return {
       showAbs: true,
@@ -26,9 +26,9 @@ export default {
   methods: {
     handleScroll () {
       const top = document.documentElement.scrollTop
-      if (top > 60 ) {
-        let opacity =  top / 140
-        opacity > 1 ? 1 : opacity
+      if (top > 60) {
+        let opacity = top / 140
+        opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = {
           opacity
         }

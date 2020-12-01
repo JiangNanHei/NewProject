@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     provideShow (city) {
+      this.keyword = ''
       Bus.$emit('searchCity', city)
     }
   },
@@ -67,7 +68,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.search,{click:true})
+    this.scroll = new Bscroll(this.$refs.search, {click: true})
   }
 }
 </script>

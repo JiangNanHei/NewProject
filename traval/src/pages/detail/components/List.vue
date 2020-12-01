@@ -19,7 +19,7 @@
 <script>
 export default {
   name: 'DetailList',
-  props: ['list'],
+  props: ['list']
 }
 </script>
 
@@ -40,6 +40,4 @@ export default {
     padding 0 .2rem
   .item-children
     padding: 0 .1rem
-
-
 </style>

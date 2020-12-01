@@ -8,21 +8,31 @@
         </div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe635;</span>
+          {{gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></gallary>
+    <fade>
+      <gallary
+        :imgs="gallaryImgs"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      >
+      </gallary>
+    </fade>
   </div>
 </template>
 
 <script>
 import Gallary from 'common/gallary/Gallary'
+import Fade from 'common/fade/Fade'
 export default {
-  name: "DetailBanner",
+  name: 'DetailBanner',
   components: {
-    Gallary
+    Gallary,
+    Fade
   },
-  props: ['list','gallaryImgs','sightName'],
+  props: ['list', 'gallaryImgs', 'sightName'],
   data () {
     return {
       showGallary: false
