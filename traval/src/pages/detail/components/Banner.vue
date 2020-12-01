@@ -26,6 +26,7 @@
 <script>
 import Gallary from 'common/gallary/Gallary'
 import Fade from 'common/fade/Fade'
+import Bus from 'styles/Bus.js'
 export default {
   name: 'DetailBanner',
   components: {
@@ -40,12 +41,15 @@ export default {
   },
   methods: {
     handleBannerClick () {
+      Bus.$emit('closeHeader')
       this.showGallary = true
     },
     handleGallaryClose () {
       this.showGallary = false
     }
-
+  },
+  activated () {
+    this.showGallary = false
   }
 }
 </script>

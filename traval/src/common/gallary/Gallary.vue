@@ -36,6 +36,9 @@ export default {
   },
   mounted () {
     document.addEventListener('touchmove', this.preventDefault, { passive: false })
+  },
+  deactivated () {
+    document.removeEventListener('touchmove', this.preventDefault, { passive: false })
   }
 }
 </script>

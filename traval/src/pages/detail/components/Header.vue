@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import Bus from 'styles/Bus.js'
 export default {
   name: 'DetailHeader',
   data () {
@@ -27,7 +28,6 @@ export default {
     handleScroll () {
       // const top = document.documentElement.scrollTop
       const top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
-      // alert()
       if (top > 60) {
         let opacity = top / 140
 
@@ -41,6 +41,12 @@ export default {
         this.showAbs = true
       }
     }
+  },
+  mounted () {
+    const _this = this
+    Bus.$on('closeHeader', function () {
+      _this.showAbs = true
+    })
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
