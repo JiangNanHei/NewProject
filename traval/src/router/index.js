@@ -22,5 +22,9 @@ export default new Router({
       name: 'Detail',
       component: Detail
     },
-  ]
+  ],
+  //页面切换时会互相影响，使用此方法可以使页面切换时页面始终在顶部
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
