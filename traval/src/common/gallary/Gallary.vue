@@ -27,8 +27,15 @@ export default {
   },
   methods: {
     handleGallaryClick () {
+      document.removeEventListener('touchmove', this.preventDefault, { passive: false })
       this.$emit('close')
+    },
+    preventDefault (e) {
+      e.preventDefault()
     }
+  },
+  mounted () {
+    document.addEventListener('touchmove', this.preventDefault, { passive: false })
   }
 }
 </script>

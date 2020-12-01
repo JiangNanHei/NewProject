@@ -15,7 +15,7 @@
     <fade>
       <gallary
         :imgs="gallaryImgs"
-        v-show="showGallary"
+        v-if="showGallary"
         @close="handleGallaryClose"
       >
       </gallary>

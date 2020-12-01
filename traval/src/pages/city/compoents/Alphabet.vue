@@ -3,12 +3,13 @@
     <li class="item"
         v-for="(item, key) of cities"
         :key="key"
-        @touchstart="handleTouchStart"
+        @touchstart.prevent="handleTouchStart"
         @touchmove="handleTouchMove"
         @touchend="handleTouchEnd"
         @click="handleLetterClick"
         :ref="key"
     >
+      <!--.prevent--阻止默认行为-->
       {{key}}
     </li>
   </ul>
