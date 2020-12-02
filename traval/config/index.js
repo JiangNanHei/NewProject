@@ -12,18 +12,17 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        // target: 'http://localhost:8080',
-        target: 'http://192.168.2.6:8080',
-        pathRewrite: {
-          '^/api': '/static/mock'
-        }
+        target: 'http://192.168.2.6:80'
+        // pathRewrite: {
+        //   '^/api': '/static/mock'
+        // }
       }
     },
 
     // Various Dev Server settings
     //host: 'localhost', // can be overwritten by process.env.HOST
-    host: '192.168.2.6', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: 'localhost', // can be overwritten by process.env.HOST
+    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -59,7 +58,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
