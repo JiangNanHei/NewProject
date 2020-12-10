@@ -1,7 +1,7 @@
 <template>
   <div class="icons">
     <swiper :options="swiperOptions">
-      <swiper-slide v-for="(page, index) of pages" :key="index">
+      <swiper-slide v-for="(page, index) of pages()" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
             <img class="icon-img-content" :src="item.imgUrl">
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+// import {getIndexData} from '../../../api'
 export default {
   name: 'HomeIcons',
   props: ['list'],
@@ -21,13 +22,24 @@ export default {
     return {
       swiperOptions: {
         autoplay: false
-      }
+      },
+      // list: {}
     }
   },
   computed: {
+
+  },
+  methods: {
+    // async getIndex () {
+    //   const indexData = await getIndexData()
+    //   this.list = indexData.data.iconList
+    // },
     pages () {
       const pages = []
-      this.list.forEach((item, index) => {
+      // 返回的数组是一个类数组，本质为object，通过Array.from 将其转化为一个真正的数组
+      const ps = this.list
+      const ls = Array.from(ps)
+      ls.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -36,6 +48,9 @@ export default {
       })
       return pages
     }
+  },
+  mounted () {
+    // this.getIndex()
   }
 }
 </script>

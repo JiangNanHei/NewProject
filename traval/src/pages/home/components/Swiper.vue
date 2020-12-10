@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOptions" v-if="list.length">
+    <swiper :options="swiperOptions" v-if="listLength()">
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl"/>
       </swiper-slide>
@@ -21,9 +21,12 @@ export default {
       }
     }
   },
-  computed: {
-    showSwiper () {
-      return this.list.length
+  methods: {
+    listLength () {
+      const listArray = this.list
+      const arrayList = Array.from (listArray)
+      const arrayListLength = arrayList.length
+      return arrayListLength
     }
   }
 }

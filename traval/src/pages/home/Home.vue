@@ -14,8 +14,7 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
-import axios from 'axios'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'Home',
   components: {
@@ -27,40 +26,45 @@ export default {
   },
   data () {
     return {
-      lastCity: '',
-      swiperList: [],
-      iconsList: [],
-      recommendList: [],
-      WeekendList: []
+      lastCity: ''
     }
   },
   computed: {
-    ...mapState(['city'])
+    ...mapState({
+      WeekendList: state => state.index.weekendList,
+      swiperList: state => state.index.swiperList,
+      iconsList: state => state.index.iconList,
+      recommendList: state => state.index.recommendList
+    })
+
   },
   methods: {
-    getHomeInfo () {
-      axios.get('/api/index.json?city=' + this.city)
-        .then(this.getHomeInfoSucc)
-    },
-    getHomeInfoSucc (res) {
-      res = res.data
-      if (res.ret && res.data) {
-        this.swiperList = res.data.swiperList
-        this.iconsList = res.data.iconList
-        this.recommendList = res.data.recommendList
-        this.WeekendList = res.data.weekendList
-      }
-    }
+    ...mapActions(['actionIndex'])
+    // getHomeInfo () {
+    //   axios.get('/api/index.json?city=' + this.city)
+    //     .then(this.getHomeInfoSucc)
+    // },
+    // getHomeInfoSucc (res) {
+    //   res = res.data
+    //   if (res.ret && res.data) {
+    //     this.swiperList = res.data.swiperList
+    //     this.iconsList = res.data.iconList
+    //     this.recommendList = res.data.recommendList
+    //     this.WeekendList = res.data.weekendList
+    //   }
+    // }
   },
   mounted () {
-    this.lastCity = this.city
-    this.getHomeInfo()
+    this.actionIndex()
+    // this.lastCity = th
+    // is.city
+    // this.getHomeInfo()
   },
   activated () {
-    if (this.lastCity !== this.city) {
-      this.lastCity = this.city
-      this.getHomeInfo()
-    }
+    // if (this.lastCity !== this.city) {
+    //   this.lastCity = this.city
+    //   this.getHomeInfo()
+    // }
   }
 }
 </script>

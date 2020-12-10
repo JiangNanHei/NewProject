@@ -6,5 +6,8 @@ try {
 } catch (e) {}
 
 export default {
-  city: defaultCity
+  defaultCity: defaultCity,
+  index: {},
+  city: {},
+  detail: {}
 }
